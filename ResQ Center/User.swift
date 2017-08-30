@@ -59,3 +59,13 @@ struct REQUser: Mappable {
         zip <- map["zip"]
     }
 }
+
+class UserClusterItem: NSObject, GMUClusterItem {
+    var position: CLLocationCoordinate2D
+    var name: String!
+    
+    init(position: CLLocationCoordinate2D, name: String) {
+        self.position = position
+        self.name = name
+    }
+}
