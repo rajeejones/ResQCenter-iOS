@@ -12,4 +12,5 @@ target 'ResQ Center' do
   pod 'Firebase/Database'
   pod 'Firebase/Auth'
   pod 'ObjectMapper', '~> 2.2'
+  pod 'ClusterKit/MapKit'
 end

@@ -12,5 +12,6 @@
 #import "GMUCluster.h"
 #import "GMUClusterManager.h"
 #import "GMUMarkerClustering.h"
+#import "GMSMapView+ClusterKit.h"
 
 #endif /* Bridging_Header_h */

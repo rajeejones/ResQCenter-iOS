@@ -36,6 +36,9 @@
 		698084181F5684D600A061EA /* GQTPointQuadTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 698083FE1F5684D600A061EA /* GQTPointQuadTree.m */; };
 		698084191F5684D600A061EA /* GQTPointQuadTreeChild.m in Sources */ = {isa = PBXBuildFile; fileRef = 698084001F5684D600A061EA /* GQTPointQuadTreeChild.m */; };
 		69AE397D1F5672CE00AA5D90 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 69AE397C1F5672CE00AA5D90 /* GoogleService-Info.plist */; };
+		EA23F59C1F57407A00344A57 /* GMSMapView+ClusterKit.m in Sources */ = {isa = PBXBuildFile; fileRef = EA23F59A1F57406000344A57 /* GMSMapView+ClusterKit.m */; };
+		EA23F59E1F575CF500344A57 /* REQClusterMarkerImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA23F59D1F575CF500344A57 /* REQClusterMarkerImageView.xib */; };
+		EA23F5A01F575DE700344A57 /* REQClusterMarkerImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA23F59F1F575DE700344A57 /* REQClusterMarkerImageView.swift */; };
 		EA4DB3751F55F41000D209FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4DB3741F55F41000D209FB /* AppDelegate.swift */; };
 		EA4DB3771F55F41000D209FB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4DB3761F55F41000D209FB /* HomeViewController.swift */; };
 		EA4DB37A1F55F41000D209FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA4DB3781F55F41000D209FB /* Main.storyboard */; };
@@ -115,6 +118,10 @@
 		6980841A1F56854800A061EA /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		69AE397C1F5672CE00AA5D90 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9A365E5FD46263A74539943F /* Pods_ResQ_Center.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ResQ_Center.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA23F59A1F57406000344A57 /* GMSMapView+ClusterKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "GMSMapView+ClusterKit.m"; sourceTree = "<group>"; };
+		EA23F59B1F57406000344A57 /* GMSMapView+ClusterKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GMSMapView+ClusterKit.h"; sourceTree = "<group>"; };
+		EA23F59D1F575CF500344A57 /* REQClusterMarkerImageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = REQClusterMarkerImageView.xib; sourceTree = "<group>"; };
+		EA23F59F1F575DE700344A57 /* REQClusterMarkerImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = REQClusterMarkerImageView.swift; sourceTree = "<group>"; };
 		EA4DB3711F55F41000D209FB /* ResQ Center.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ResQ Center.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA4DB3741F55F41000D209FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA4DB3761F55F41000D209FB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -294,6 +301,15 @@
 			path = "Google-Maps-iOS-Utils/QuadTree";
 			sourceTree = "<group>";
 		};
+		EA23F5991F57404D00344A57 /* ClusterKit */ = {
+			isa = PBXGroup;
+			children = (
+				EA23F59B1F57406000344A57 /* GMSMapView+ClusterKit.h */,
+				EA23F59A1F57406000344A57 /* GMSMapView+ClusterKit.m */,
+			);
+			name = ClusterKit;
+			sourceTree = "<group>";
+		};
 		EA4DB3681F55F41000D209FB = {
 			isa = PBXGroup;
 			children = (
@@ -315,6 +331,7 @@
 		EA4DB3731F55F41000D209FB /* ResQ Center */ = {
 			isa = PBXGroup;
 			children = (
+				EA23F5991F57404D00344A57 /* ClusterKit */,
 				698083BB1F56843A00A061EA /* Google-Maps-iOS-Utils */,
 				695ED4FB1F56627B006785E8 /* Model */,
 				EA4DB3741F55F41000D209FB /* AppDelegate.swift */,
@@ -327,6 +344,8 @@
 				695ED4F91F56497F006785E8 /* FirebaseManager.swift */,
 				69AE397C1F5672CE00AA5D90 /* GoogleService-Info.plist */,
 				6980841A1F56854800A061EA /* Bridging-Header.h */,
+				EA23F59D1F575CF500344A57 /* REQClusterMarkerImageView.xib */,
+				EA23F59F1F575DE700344A57 /* REQClusterMarkerImageView.swift */,
 			);
 			path = "ResQ Center";
 			sourceTree = "<group>";
@@ -397,6 +416,7 @@
 				69AE397D1F5672CE00AA5D90 /* GoogleService-Info.plist in Resources */,
 				EA4DB37C1F55F41000D209FB /* Assets.xcassets in Resources */,
 				EA4DB37A1F55F41000D209FB /* Main.storyboard in Resources */,
+				EA23F59E1F575CF500344A57 /* REQClusterMarkerImageView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,7 +481,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -475,6 +495,7 @@
 				698084121F5684D600A061EA /* GMUPoint.m in Sources */,
 				698084181F5684D600A061EA /* GQTPointQuadTree.m in Sources */,
 				6980840C1F5684D600A061EA /* GMUKMLParser.m in Sources */,
+				EA23F5A01F575DE700344A57 /* REQClusterMarkerImageView.swift in Sources */,
 				698084101F5684D600A061EA /* GMULineString.m in Sources */,
 				698084191F5684D600A061EA /* GQTPointQuadTreeChild.m in Sources */,
 				698084031F5684D600A061EA /* GMUNonHierarchicalDistanceBasedAlgorithm.m in Sources */,
@@ -486,6 +507,7 @@
 				698084131F5684D600A061EA /* GMUPolygon.m in Sources */,
 				698084071F5684D600A061EA /* GMUStaticCluster.m in Sources */,
 				698084041F5684D600A061EA /* GMUSimpleClusterAlgorithm.m in Sources */,
+				EA23F59C1F57407A00344A57 /* GMSMapView+ClusterKit.m in Sources */,
 				6980840D1F5684D600A061EA /* GMUFeature.m in Sources */,
 				698084171F5684D600A061EA /* GMUWeightedLatLng.m in Sources */,
 				EA4DB3751F55F41000D209FB /* AppDelegate.swift in Sources */,

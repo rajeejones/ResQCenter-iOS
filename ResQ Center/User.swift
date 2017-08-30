@@ -8,6 +8,7 @@
 
 import Foundation
 import ObjectMapper
+import ClusterKit
 
 struct REQUser: Mappable {
     
@@ -58,6 +59,14 @@ struct REQUser: Mappable {
         updated_date <- (map["updated_date"], DateTransform())
         zip <- map["zip"]
     }
+    
+    func getCoordinates() -> CLLocationCoordinate2D? {
+        if let lat = self.latitude, let long = self.longitude {
+            return CLLocationCoordinate2D(latitude: CLLocationDegrees(lat), longitude: CLLocationDegrees(long))
+        } else {
+            return nil
+        }
+    }
 }
 
 class UserClusterItem: NSObject, GMUClusterItem {
@@ -68,4 +77,16 @@ class UserClusterItem: NSObject, GMUClusterItem {
         self.position = position
         self.name = name
     }
+}
+
+class UserAnnotation: NSObject, CKAnnotation {
+    var coordinate: CLLocationCoordinate2D
+    var cluster: CKCluster?
+    var user: REQUser!
+    
+    init(user:REQUser!) {
+        self.user = user
+        self.coordinate = user.getCoordinates()!
+    }
+
 }
