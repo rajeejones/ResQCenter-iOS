@@ -28,18 +28,13 @@ class RequestsMapViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Rescue"
         ref = Database.database().reference()
-        
-        // Register self to listen to both GMUClusterManagerDelegate and GMSMapViewDelegate events.
-//        clusterManager.setDelegate(self, mapDelegate: self)
-        
-        
+
         if #available(iOS 11.0, *) {
             //self.navigationController?.navigationItem.largeTitleDisplayMode = .never
         } else {
             // Fallback on earlier versions
         }
         
-        // Add loading sspinner
         createMapView()
     }
     
@@ -73,10 +68,7 @@ class RequestsMapViewController: UIViewController {
         present(actionSheet, animated: true, completion: nil)
     }
     func setupClusterManager() {
-        // Set up the cluster manager with the supplied icon generator and
-        // renderer.
-//        let iconGenerator = GMUDefaultClusterIconGenerator()
-        //let algorithm = GMUNonHierarchicalDistanceBasedAlgorithm()
+
         mapView.dataSource = self
         mapView.delegate = self
         mapView.settings.compassButton = true
@@ -88,26 +80,6 @@ class RequestsMapViewController: UIViewController {
         mapView.clusterManager.marginFactor = 1
         self.getUserMarkers()
     }
-    
-    /// Randomly generates cluster items within some extent of the camera and
-    /// adds them to the cluster manager.
-//    private func generateClusterItems() {
-//        let extent = 0.2
-//        for index in 1...kClusterItemCount {
-//            let lat = kCameraLatitude + extent * randomScale()
-//            let lng = kCameraLongitude + extent * randomScale()
-//            let name = "Item \(index)"
-//            let item =
-//                UserClusterItem(position: CLLocationCoordinate2DMake(lat, lng), name: name)
-//            clusterManager.add(item)
-//        }
-//    }
-    
-    /// Returns a random value between -1.0 and 1.0.
-    private func randomScale() -> Double {
-        return Double(arc4random()) / Double(UINT32_MAX) * 2.0 - 1.0
-    }
-    
     
     func createMapView() {
         let currentAreaChild = ref.child("area")
@@ -144,29 +116,13 @@ class RequestsMapViewController: UIViewController {
     
     func addMarkerForUser(_ user: REQUser?) {
         guard let _ = user?.latitude, let _ = user?.longitude else { return }
-//
-//        let marker = GMSMarker()
-//        marker.position = CLLocationCoordinate2D(latitude: CLLocationDegrees(lat), longitude: CLLocationDegrees(long))
-//        marker.title = user?.name
-//        marker.snippet = user?.status
-//        marker.map = mapView
-        
+
         let annotation = UserAnnotation(user: user)
         userAnnotations.append(annotation)
     }
 
 
 }
-
-//class UserCKAnnotation: NSObject, CKAnnotation {
-//    var cluster: CKCluster?
-//    var coordinate: CLLocationCoordinate2D
-//
-//    init(cluster:CKCluster!, coordinate:CLLocationCoordinate2D!) {
-//        self.cluster = cluster
-//        self.coordinate = coordinate
-//    }
-//}
 
 extension RequestsMapViewController: GMSMapViewDataSource, GMSMapViewDelegate {
     func mapView(_ mapView: GMSMapView, markerFor cluster: CKCluster) -> GMSMarker {
@@ -254,28 +210,3 @@ extension RequestsMapViewController: GMSMapViewDataSource, GMSMapViewDelegate {
         }
     }
 }
-
-
-//extension RequestsMapViewController: GMUClusterManagerDelegate, GMSMapViewDelegate {
-//    // MARK: - GMUClusterManagerDelegate
-//
-//    func clusterManager(_ clusterManager: GMUClusterManager, didTap cluster: GMUCluster) -> Bool {
-//        let newCamera = GMSCameraPosition.camera(withTarget: cluster.position,
-//                                                 zoom: mapView.camera.zoom + 1)
-//        let update = GMSCameraUpdate.setCamera(newCamera)
-//        mapView.moveCamera(update)
-//        return false
-//    }
-//
-//    // MARK: - GMUMapViewDelegate
-//
-//    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
-//        if let poiItem = marker.userData as? UserClusterItem {
-//            NSLog("Did tap marker for cluster item \(poiItem.name)")
-//        } else {
-//            NSLog("Did tap a normal marker")
-//        }
-//        return false
-//    }
-//}
-
