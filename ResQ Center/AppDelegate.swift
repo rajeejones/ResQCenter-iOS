@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GMSServices.provideAPIKey(googleMapsAPIKey)
         GMSPlacesClient.provideAPIKey(googleMapsAPIKey)
         FirebaseApp.configure()
+        FirebaseManager.self.setup()
         return true
     }
 

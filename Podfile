@@ -10,4 +10,6 @@ target 'ResQ Center' do
   pod 'GooglePlaces'
   pod 'Firebase/Core'
   pod 'Firebase/Database'
+  pod 'Firebase/Auth'
+  pod 'ObjectMapper', '~> 2.2'
 end

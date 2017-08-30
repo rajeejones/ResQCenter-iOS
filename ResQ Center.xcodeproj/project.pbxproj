@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2DDE6045313913C2017B7911 /* Pods_ResQ_Center.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A365E5FD46263A74539943F /* Pods_ResQ_Center.framework */; };
+		695ED4FA1F56497F006785E8 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695ED4F91F56497F006785E8 /* FirebaseManager.swift */; };
+		695ED4FD1F5662BF006785E8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695ED4FC1F5662BF006785E8 /* User.swift */; };
+		695ED4FF1F566CC0006785E8 /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695ED4FE1F566CC0006785E8 /* Area.swift */; };
+		69AE397D1F5672CE00AA5D90 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 69AE397C1F5672CE00AA5D90 /* GoogleService-Info.plist */; };
 		EA4DB3751F55F41000D209FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4DB3741F55F41000D209FB /* AppDelegate.swift */; };
 		EA4DB3771F55F41000D209FB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4DB3761F55F41000D209FB /* HomeViewController.swift */; };
 		EA4DB37A1F55F41000D209FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA4DB3781F55F41000D209FB /* Main.storyboard */; };
@@ -18,8 +22,11 @@
 
 /* Begin PBXFileReference section */
 		1A90124657B036E0C9ED0603 /* Pods-ResQ Center.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ResQ Center.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ResQ Center/Pods-ResQ Center.debug.xcconfig"; sourceTree = "<group>"; };
+		695ED4F91F56497F006785E8 /* FirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		695ED4FC1F5662BF006785E8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		695ED4FE1F566CC0006785E8 /* Area.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
+		69AE397C1F5672CE00AA5D90 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9A365E5FD46263A74539943F /* Pods_ResQ_Center.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ResQ_Center.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA23F5981F561FD100344A57 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EA4DB3711F55F41000D209FB /* ResQ Center.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ResQ Center.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA4DB3741F55F41000D209FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA4DB3761F55F41000D209FB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +67,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		695ED4FB1F56627B006785E8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				695ED4FC1F5662BF006785E8 /* User.swift */,
+				695ED4FE1F566CC0006785E8 /* Area.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		EA4DB3681F55F41000D209FB = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +97,7 @@
 		EA4DB3731F55F41000D209FB /* ResQ Center */ = {
 			isa = PBXGroup;
 			children = (
+				695ED4FB1F56627B006785E8 /* Model */,
 				EA4DB3741F55F41000D209FB /* AppDelegate.swift */,
 				EA4DB3761F55F41000D209FB /* HomeViewController.swift */,
 				EA4DB3781F55F41000D209FB /* Main.storyboard */,
@@ -88,7 +105,8 @@
 				EA4DB37D1F55F41000D209FB /* LaunchScreen.storyboard */,
 				EA4DB3801F55F41000D209FB /* Info.plist */,
 				EA4DB3881F55F99300D209FB /* RequestsMapViewController.swift */,
-				EA23F5981F561FD100344A57 /* GoogleService-Info.plist */,
+				695ED4F91F56497F006785E8 /* FirebaseManager.swift */,
+				69AE397C1F5672CE00AA5D90 /* GoogleService-Info.plist */,
 			);
 			path = "ResQ Center";
 			sourceTree = "<group>";
@@ -156,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA4DB37F1F55F41000D209FB /* LaunchScreen.storyboard in Resources */,
+				69AE397D1F5672CE00AA5D90 /* GoogleService-Info.plist in Resources */,
 				EA4DB37C1F55F41000D209FB /* Assets.xcassets in Resources */,
 				EA4DB37A1F55F41000D209FB /* Main.storyboard in Resources */,
 			);
@@ -170,9 +189,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ResQ Center/Pods-ResQ Center-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -185,9 +213,13 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ResQ Center/Pods-ResQ Center-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -200,13 +232,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ResQ Center-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -216,8 +251,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				695ED4FA1F56497F006785E8 /* FirebaseManager.swift in Sources */,
 				EA4DB3771F55F41000D209FB /* HomeViewController.swift in Sources */,
 				EA4DB3751F55F41000D209FB /* AppDelegate.swift in Sources */,
+				695ED4FD1F5662BF006785E8 /* User.swift in Sources */,
+				695ED4FF1F566CC0006785E8 /* Area.swift in Sources */,
 				EA4DB3891F55F99300D209FB /* RequestsMapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,7 +401,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rajeejones.ResQ-Center";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -380,7 +418,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rajeejones.ResQ-Center";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
